@@ -1,0 +1,612 @@
+* {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  overflow-y: auto;
+  height: 100%;
+}
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: white;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: black;
+    }
+}
+
+section {
+    padding-top: 0;
+    /* padding-left: 0;
+    padding-right: 0; */
+    
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    span {
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+        padding-top: .5rem;
+    }
+}
+
+.btn {
+    font-size: 2rem;
+    font-weight: lighter;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    color: white;
+    background-color: black;
+    border: .2rem solid black;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: .5rem;
+
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+}
+
+.line-down {
+    position: relative;
+    z-index: 0;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: .5rem;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background: rgb(252, 186, 100);
+        z-index: -1;
+        clip-path: polygon(0 80%, 100% 75%, 100% 100%, 0% 100%);
+    }
+}
+
+/* header  */
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: 2rem 9%;
+    z-index: 999;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+
+    .logo {
+        font-size: 2.5rem;
+        color: black;
+
+    }
+
+    .navbar a {
+        margin: 0 1rem;
+        font-size: 2rem;
+        color: black;
+        z-index: 100;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+#menu-btn {
+    cursor: pointer;
+    font-size: 2rem;
+    display: none;
+}
+
+@keyframes floating {
+
+    0% {
+        transform: translateY(0rem);
+    }
+
+    50% {
+        transform: translateY(-4rem);
+    }
+
+    100% {
+        transform: translateY(0rem);
+    }
+}
+
+/* home page */
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background: pink;
+    z-index: 1000;
+}
+
+.photo {
+    min-height: 80vh;
+    flex: 1 1 42rem;
+    margin-top: 5rem;
+}
+
+.photo {
+    width: 100%;
+    animation: floating 6s ease-in-out infinite;
+}
+
+.content {
+    flex: 1 1 42rem;
+}
+
+.home_h3 {
+    font-size: 5rem;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+.home_p {
+    padding: 2rem 0;
+    line-height: 2;
+    font-size: 1.8rem;
+}
+
+
+/* services section */
+
+.services {
+    background-color: rgb(250, 240, 186);
+
+}
+
+.heading {
+    margin: 0;
+    background: rgb(250, 240, 186);
+
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(400px, 1fr));
+    gap: 3rem;
+    grid: 32rem;
+    background: rgb(250, 240, 186);
+    margin-left: 35px;
+    margin-right: 35px;
+
+}
+
+.box {
+    /* border: 1px solid black; */
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.service_img {
+    height: 8rem;
+}
+
+.service_h3 {
+    font-size: 2.2rem;
+    padding: 1.5rem 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.service_p {
+    line-height: 2;
+    font-size: 1.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+}
+
+/* about section */
+
+.about {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.photo {
+    flex: 1 1 42rem;
+    width: 100%;
+    height: 100%;
+}
+
+.about_img {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    flex: 1 1 42rem;
+}
+
+.about_h3 {
+    font-size: 4rem;
+    line-height: 1.5;
+}
+
+.about_p {
+    font-size: 1.7rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+
+/* step section  */
+
+
+
+.step-heading {
+    /* margin: 0; */
+    background: rgb(250, 240, 186);
+    margin-bottom: 25px;
+        text-align: center;
+    margin-bottom: 3rem;
+
+    span {
+        font-size: 2.5rem;
+    }
+
+    h1 {
+        font-size: 4rem;
+        padding-top: .5rem;
+    }
+
+}
+
+.step-box-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 3rem;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+    margin-bottom: 60px;
+}
+
+
+.step-box {
+    
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: white;
+    border-radius: 50px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.step_img {
+    height: 20rem;
+}
+
+.step_h3 {
+    font-size: 2.2rem;
+    padding: 1.5rem 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.step_p {
+    line-height: 2;
+    font-size: 1.5rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+}
+
+/* feature section */
+
+
+.feature_box_container {
+    box-sizing: content-box;
+
+    .feature_box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 3rem;
+        margin: 0 35px;
+            margin-top: 20px;
+            margin-bottom: 5px;
+            flex:42rem 1 1 ;
+
+        .feature_img {
+            flex: 0 1 40rem;
+            width: 100px;
+            
+
+            img {
+                width: 100%;
+            }
+        }
+
+
+    }
+}
+
+.feature_h3 {
+    font-size: 3rem;
+}
+
+.feature_p {
+    
+    line-height: 1;
+    font-size: 2rem;
+}
+
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* pricing section */
+
+
+.pricing {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #fff;
+}
+
+.price-toggler {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.price-toggler span {
+  padding: 0.6rem 1.5rem;
+  border: 2px solid #000000;
+  border-radius: 50px;
+  color: #000000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.price-toggler .active,
+.price-toggler span:hover {
+  background-color: #000000;
+  color: white;
+}
+
+
+.price_box {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(44, 44, 44, 0.5);
+  width: 100%;
+  max-width: 350px;
+  margin: 6rem;
+  transition: transform 0.3s ease;
+  width: 500px;
+  height: 500px;
+}
+.pricing-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+
+.price_box:hover {
+  transform: translateY(-5px);
+}
+
+.price_box h3 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 10rem;
+}
+
+.price_box .price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 1.5rem;
+}
+
+.price_box .price .month,
+.price_box .price .year {
+  display: none;
+}
+
+.price_box .price .month.active,
+.price_box .price .year.active {
+  display: block;
+}
+
+.price_box .list {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.price_box .list p {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.price_box .list i {
+  color: #000000;
+  margin-right: 0.5rem;
+  font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media quries */
+
+@media (max-width:1200px) {
+    .header {
+        padding: 1rem;
+    }
+
+    section {
+        padding: 5rem 9%;
+    }
+
+    .home .content h3 {
+        font-size: 4rem;
+    }
+    .box-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width:768px) {
+
+    #menu-btn {
+        display: inline-block;
+        transition: .3s linear;
+
+        &.fa-times {
+            transform: rotate(180deg);
+        }
+    }
+
+    .header {
+        .btn {
+            display: none;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 99%;
+            left: 0;
+            right: 0;
+            border-top: .2rem solid black;
+            background-color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            transition: .2s linear;
+
+            &.active {
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+        }
+
+        a {
+            display: block;
+            margin: 0;
+            padding: 1.5rem 2rem;
+        }
+     .step-box-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0;
+        display: grid;
+  }
+  .box-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+  .price_box {
+    width: 100%;
+    max-width: 90%;
+
+}
+
+}
+
+@media (max-width:450px) {
+    html {
+        font-size: 46%;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+    
+      .step-box-container {
+    grid-template-columns: 1fr;
+  }
+  .box-container {
+    grid-template-columns: repeat(1, 1fr);
+            padding: 22px;
+  }
+}
+ 
